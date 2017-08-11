@@ -7,7 +7,7 @@ In progress...
 *Un Coding Standard Excelent pentru Javascript*
 
 
-## Cuprins
+##   <a name="table-of-contents"></a>Cuprins
 
   1. [Tipuri de date](#types)
   1. [Values prin Referinta](#references)
