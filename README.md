@@ -47,10 +47,10 @@ In progress...
   1. [Contribuitori](#contributors)
   1. [Licenta](#license)
 
-## Types
+## Tipuri de date
 
   <a name="types--primitives"></a><a name="1.1"></a>
-  - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#types--primitives) **Primitive**: Cand accesezi o un tip de data primitiva se face prin valoare.
 
     - `string`
     - `number`
@@ -68,7 +68,7 @@ In progress...
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#types--complex)  **Complex**: Cand accesezi o un tip de data complexa se face prin referinta.
 
     - `object`
     - `array`
