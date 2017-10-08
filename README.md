@@ -11,8 +11,8 @@ In progress...
 
   1. [Tipuri de date](#types)
   1. [Valori prin Referinta](#references)
-  1. [Obiecte](#objects)
-  1. [Șiruri(Array)](#arrays)
+  1. [Obiecte (Objects)](#objects)
+  1. [Șiruri (Array)](#arrays)
   1. [Destructorare(Destructuring)](#destructuring)
   1. [Stringuri(Strings)](#strings)
   1. [Functii](#functions)
@@ -85,36 +85,36 @@ In progress...
 
 **[⬆ back to top](#table-of-contents)**
 
-## References
+## Referinte(References)
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-  - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
+  - [2.1](#references--prefer-const) Folositi `const` pentru tot ce tine de referinte; incercati sa evitati pe cat posibil `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
-    > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
+    > De ce? Pentru a fi sigur ca nu se reasigneaza prin referinta, ceea ce duce la erori (bug-uri) si creste dificultatea de a intelege codul.
 
     ```javascript
-    // bad
+    // gresit (bad)
     var a = 1;
     var b = 2;
 
-    // good
+    // corect (good)
     const a = 1;
     const b = 2;
     ```
 
   <a name="references--disallow-var"></a><a name="2.2"></a>
-  - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
+  - [2.2](#references--disallow-var) In cazul in care se doreste reasignare prin referinta (reassign references), folositi `let` si numai utilizati `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
-    > Why? `let` is block-scoped rather than function-scoped like `var`.
+    > De ce? `let` este [block-scoped](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) decat [function-scoped](https://stackoverflow.com/questions/34299815/what-is-a-scoping-function-in-javascript) precum `var`.
 
     ```javascript
-    // bad
+    // gresit (bad)
     var count = 1;
     if (true) {
       count += 1;
     }
 
-    // good, use the let.
+    // corect (good), folositi doar `let`.
     let count = 1;
     if (true) {
       count += 1;
@@ -122,21 +122,21 @@ In progress...
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped.
+  - [2.3](#references--block-scope) Observati amandoua `let` si `const` sunt block-scoped.
 
     ```javascript
-    // const and let only exist in the blocks they are defined in.
+    // const si let doar exista in blocuri (blocks), unde sunt definite.
     {
       let a = 1;
       const b = 1;
     }
-    console.log(a); // ReferenceError
-    console.log(b); // ReferenceError
+    console.log(a); //Eroare Referinta (ReferenceError)
+    console.log(b); //Eroare Referinta (ReferenceError)
     ```
 
 **[⬆ back to top](#table-of-contents)**
 
-## Objects
+## Obiecte (Objects)
 
   <a name="objects--no-new"></a><a name="3.1"></a>
   - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
